@@ -68,7 +68,7 @@ class Command:
         if self.pin == 20:
             return board.GP20
 
-        self.logger.info('Pin is not supported yet: '+ pin)
+        self.logger.info('Pin is not supported yet: '.format(self.pin))
         return None
         
 class Button:
