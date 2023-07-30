@@ -1,0 +1,10 @@
+#Pico files
+.metadata_never_index
+.Trashes
+.fseventsd/
+boot_out.txt
+settings.toml
+lib/
+
+#IDE
+.vscode/

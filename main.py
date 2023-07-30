@@ -4,15 +4,14 @@ import rotaryio
 import board
 import digitalio
 import usb_hid
-import time
 from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 from adafruit_hid.consumer_control import ConsumerControl
 from adafruit_hid.keycode import Keycode
-from shortCuts import ShortCuts
-from logger import ConsoleLogger
-from leds import Led
-from leds import LedSwitch
+from src.shortCuts import ShortCuts
+from src.logger import ConsoleLogger
+from src.leds import Led
+from src.leds import LedSwitch
 
 cc = ConsumerControl(usb_hid.devices)
 kbd = Keyboard(usb_hid.devices)
@@ -173,6 +172,7 @@ def handleRemoteCommand(remoteValue):
         if remoteValue is not None:
             logger.info('Remote value {} is not supported!'.format(remoteValue))
 
+logger.info('Start app')
 while True:
     encoder.update(state.getValue())
         
